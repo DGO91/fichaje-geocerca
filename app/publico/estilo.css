@@ -21,16 +21,31 @@ body {
   font:400 16px/1.5 Geist, system-ui, -apple-system, "Segoe UI", sans-serif;
   -webkit-font-smoothing:antialiased;
   display:flex; justify-content:center;
-  padding:28px 16px 56px;
+  padding:clamp(16px, 4vw, 40px) clamp(12px, 4vw, 32px) 56px;
+  padding-left:max(clamp(12px,4vw,32px), env(safe-area-inset-left));
+  padding-right:max(clamp(12px,4vw,32px), env(safe-area-inset-right));
 }
 
-.telefono { width:100%; max-width:420px; }
+.telefono { width:100%; max-width:460px; }
+
+/* Una sola columna en el telefono, que es donde se usa. En pantallas
+   anchas se reparte en dos para que no quede una tira estrecha en medio
+   de un monitor. El orden de lectura no cambia. */
+.columnas { display:flex; flex-direction:column; }
+
+@media (min-width: 880px) {
+  .telefono { max-width:940px; }
+  .columnas { display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start; }
+  .mapa { height:200px; }
+}
 
 header {
   display:flex; align-items:center; justify-content:space-between;
   margin-bottom:18px;
 }
-header .quien { font-size:17px; font-weight:600; letter-spacing:-.01em; }
+header { gap:12px; }
+header .quien { font-size:17px; font-weight:600; letter-spacing:-.01em;
+  overflow-wrap:anywhere; }
 header .rol { font-size:13px; color:var(--tinta-2); margin-top:2px; }
 
 .idioma { display:inline-flex; border:1px solid var(--linea); border-radius:999px;
@@ -44,7 +59,7 @@ header .rol { font-size:13px; color:var(--tinta-2); margin-top:2px; }
 
 .tarjeta {
   background:var(--fondo); border:1px solid var(--linea);
-  border-radius:var(--radio); padding:18px; margin-bottom:14px;
+  border-radius:var(--radio); padding:clamp(14px, 4vw, 20px); margin-bottom:14px;
 }
 .rotulo {
   font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
@@ -55,7 +70,7 @@ header .rol { font-size:13px; color:var(--tinta-2); margin-top:2px; }
 
 /* Mapa esquemático: cuadrícula, perímetro y la posición declarada. */
 .mapa {
-  position:relative; height:168px; margin:16px 0 14px;
+  position:relative; height:clamp(140px, 40vw, 188px); margin:16px 0 14px;
   border-radius:var(--radio); border:1px solid var(--linea); overflow:hidden;
   background:
     repeating-linear-gradient(0deg, var(--linea) 0 1px, transparent 1px 24px),
@@ -92,7 +107,7 @@ header .rol { font-size:13px; color:var(--tinta-2); margin-top:2px; }
 .fichar {
   width:100%; min-height:58px; border:0; border-radius:var(--radio);
   background:var(--accion); color:#fff; font:600 17px Geist, system-ui, sans-serif;
-  cursor:pointer; margin-top:4px;
+  cursor:pointer; margin:0 0 14px;
 }
 .fichar:active { transform:scale(.99); }
 .fichar[disabled] { background:#c9ced5; cursor:default; }
@@ -107,8 +122,10 @@ header .rol { font-size:13px; color:var(--tinta-2); margin-top:2px; }
 
 .marca {
   display:flex; align-items:baseline; justify-content:space-between;
+  gap:10px; flex-wrap:wrap;
   padding:11px 0; border-top:1px solid var(--linea); font-size:15px;
 }
+.marca > span:first-child { flex:1 1 auto; min-width:0; }
 .marca:first-of-type { border-top:0; }
 .marca .hora { font-variant-numeric:tabular-nums; color:var(--tinta-2); font-size:14px; }
 .marca .estado { font-size:13px; }
@@ -121,4 +138,14 @@ header .rol { font-size:13px; color:var(--tinta-2); margin-top:2px; }
 .pie button {
   border:0; background:transparent; color:var(--tinta-2);
   font:400 14px Geist, system-ui, sans-serif; cursor:pointer; text-decoration:underline;
+}
+
+/* El cursor fino no necesita objetivos de guante, pero el dedo si. */
+@media (hover: hover) {
+  .escenarios button:hover { border-color:#b9c1cb; }
+  .fichar:hover { background:#1a5fd0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yo { transition:none; }
 }

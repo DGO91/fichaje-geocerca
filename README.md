@@ -98,9 +98,13 @@ operativo (Play Integrity y App Attest), que es la capa que confirma que
 el aparato no está manipulado. Esas van en el proyecto, no en la
 demostración.
 
-`app-pantalla.png` y `pantalla-fichaje.png` muestran cómo se ve en el
-teléfono. Los textos de rechazo son los que devuelve la base de datos, no
-maquetación.
+La pantalla es responsive: una sola columna en el teléfono, que es donde
+se usa, y dos en pantallas anchas para no dejar una tira estrecha en
+medio de un monitor. Verificada a 320, 480 y 1280 px.
+
+`app-movil.png`, `app-escritorio.png` y `pantalla-fichaje.png` muestran
+cómo se ve. Los textos de rechazo son los que devuelve la base de datos,
+no maquetación.
 
 ## Cómo trabajo
 
