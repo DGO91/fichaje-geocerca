@@ -1,0 +1,124 @@
+/* Pantalla que se lee con guantes, al sol y de pie.
+   Contraste alto, un solo color de acción, objetivos grandes. */
+
+:root {
+  --tinta:#111418;
+  --tinta-2:#5b6470;
+  --linea:#e2e5e9;
+  --fondo:#ffffff;
+  --superficie:#f7f8f9;
+  --accion:#1f6feb;
+  --aceptada:#0ca30c;
+  --rechazada:#c2410c;
+  --radio:12px;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background:var(--superficie);
+  color:var(--tinta);
+  font:400 16px/1.5 Geist, system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing:antialiased;
+  display:flex; justify-content:center;
+  padding:28px 16px 56px;
+}
+
+.telefono { width:100%; max-width:420px; }
+
+header {
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:18px;
+}
+header .quien { font-size:17px; font-weight:600; letter-spacing:-.01em; }
+header .rol { font-size:13px; color:var(--tinta-2); margin-top:2px; }
+
+.idioma { display:inline-flex; border:1px solid var(--linea); border-radius:999px;
+  overflow:hidden; background:var(--fondo); }
+.idioma button {
+  font:600 12px/1 Geist, system-ui, sans-serif; letter-spacing:.06em;
+  padding:9px 15px; border:0; background:transparent; color:var(--tinta-2);
+  cursor:pointer;
+}
+.idioma button.on { background:var(--accion); color:#fff; }
+
+.tarjeta {
+  background:var(--fondo); border:1px solid var(--linea);
+  border-radius:var(--radio); padding:18px; margin-bottom:14px;
+}
+.rotulo {
+  font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--tinta-2);
+}
+.obra { font-size:18px; font-weight:600; margin-top:8px; letter-spacing:-.01em; }
+.obra small { display:block; font-size:13px; font-weight:400; color:var(--tinta-2); margin-top:3px; }
+
+/* Mapa esquemático: cuadrícula, perímetro y la posición declarada. */
+.mapa {
+  position:relative; height:168px; margin:16px 0 14px;
+  border-radius:var(--radio); border:1px solid var(--linea); overflow:hidden;
+  background:
+    repeating-linear-gradient(0deg, var(--linea) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, var(--linea) 0 1px, transparent 1px 24px),
+    var(--superficie);
+}
+.perimetro {
+  position:absolute; left:50%; top:50%; width:118px; height:118px;
+  margin:-59px 0 0 -59px; border-radius:50%;
+  border:2px dashed #aab2bd;
+}
+.yo {
+  position:absolute; width:16px; height:16px; border-radius:50%;
+  margin:-8px 0 0 -8px; border:2px solid #fff;
+  box-shadow:0 0 0 5px rgba(31,111,235,.14);
+  transition:left .35s ease, top .35s ease, background .2s;
+}
+
+.datos div {
+  display:flex; justify-content:space-between; padding:6px 0; font-size:15px;
+  color:var(--tinta-2);
+}
+.datos b { color:var(--tinta); font-weight:500; font-variant-numeric:tabular-nums; }
+
+.escenarios { display:grid; gap:8px; }
+.escenarios button {
+  text-align:left; padding:13px 15px; border-radius:var(--radio);
+  border:1px solid var(--linea); background:var(--fondo); color:var(--tinta);
+  font:500 15px Geist, system-ui, sans-serif; cursor:pointer;
+}
+.escenarios button.on { border-color:var(--accion); box-shadow:inset 0 0 0 1px var(--accion); }
+.escenarios small { display:block; font-weight:400; font-size:13px; color:var(--tinta-2); margin-top:3px; }
+
+.fichar {
+  width:100%; min-height:58px; border:0; border-radius:var(--radio);
+  background:var(--accion); color:#fff; font:600 17px Geist, system-ui, sans-serif;
+  cursor:pointer; margin-top:4px;
+}
+.fichar:active { transform:scale(.99); }
+.fichar[disabled] { background:#c9ced5; cursor:default; }
+
+.veredicto { border-width:2px; }
+.veredicto .titulo { font-size:17px; font-weight:600; letter-spacing:-.01em; }
+.veredicto .motivo { font-size:14px; color:var(--tinta-2); margin-top:6px; line-height:1.45; }
+.veredicto.aceptada { border-color:var(--aceptada); }
+.veredicto.aceptada .titulo { color:var(--aceptada); }
+.veredicto.rechazada { border-color:var(--rechazada); }
+.veredicto.rechazada .titulo { color:var(--rechazada); }
+
+.marca {
+  display:flex; align-items:baseline; justify-content:space-between;
+  padding:11px 0; border-top:1px solid var(--linea); font-size:15px;
+}
+.marca:first-of-type { border-top:0; }
+.marca .hora { font-variant-numeric:tabular-nums; color:var(--tinta-2); font-size:14px; }
+.marca .estado { font-size:13px; }
+.marca .estado.aceptada { color:var(--aceptada); }
+.marca .estado.rechazada { color:var(--rechazada); }
+
+.vacio { color:var(--tinta-2); font-size:15px; padding:6px 0; }
+
+.pie { margin-top:22px; text-align:center; }
+.pie button {
+  border:0; background:transparent; color:var(--tinta-2);
+  font:400 14px Geist, system-ui, sans-serif; cursor:pointer; text-decoration:underline;
+}

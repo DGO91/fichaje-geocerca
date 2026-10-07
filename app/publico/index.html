@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Fichaje con geocerca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="estilo.css"/>
+</head><body>
+
+<div class="telefono">
+
+ <header>
+  <div>
+   <div class="quien" id="quien">—</div>
+   <div class="rol" id="rol" data-es="Trabajador" data-en="Worker">Trabajador</div>
+  </div>
+  <span class="idioma">
+   <button class="on" onclick="idioma('es')">ES</button>
+   <button onclick="idioma('en')">EN</button>
+  </span>
+ </header>
+
+ <section class="tarjeta">
+  <div class="rotulo" data-es="Dónde estás" data-en="Where you are">Dónde estás</div>
+  <div class="obra" id="obra">—<small id="obraSub">—</small></div>
+  <div class="mapa"><div class="perimetro"></div><div class="yo" id="yo"></div></div>
+  <div class="datos">
+   <div><span data-es="Distancia al centro" data-en="Distance to centre">Distancia al centro</span><b id="distancia">—</b></div>
+   <div><span data-es="Precisión GPS" data-en="GPS accuracy">Precisión GPS</span><b id="precision">—</b></div>
+   <div><span data-es="Teléfono" data-en="Phone">Teléfono</span><b id="telefono">—</b></div>
+  </div>
+ </section>
+
+ <section class="tarjeta">
+  <div class="rotulo" style="margin-bottom:12px"
+   data-es="Simula la situación" data-en="Simulate the situation">Simula la situación</div>
+  <div class="escenarios" id="escenarios"></div>
+ </section>
+
+ <button class="fichar" id="fichar" onclick="fichar()"
+  data-es="Registrar entrada" data-en="Clock in">Registrar entrada</button>
+
+ <section class="tarjeta veredicto" id="veredicto" hidden>
+  <div class="titulo" id="vTitulo"></div>
+  <div class="motivo" id="vMotivo"></div>
+ </section>
+
+ <section class="tarjeta" id="hoyCaja">
+  <div class="rotulo" style="margin-bottom:10px" data-es="Hoy" data-en="Today">Hoy</div>
+  <div id="hoy"></div>
+ </section>
+
+ <div class="pie">
+  <button onclick="reiniciar()" data-es="Empezar de nuevo" data-en="Start over">Empezar de nuevo</button>
+ </div>
+
+</div>
+
+<script src="app.js"></script>
+</body></html>

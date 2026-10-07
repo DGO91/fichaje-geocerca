@@ -23,4 +23,8 @@ test: migrate
 psql: up
 	@docker exec -it fichaje_demo_db psql -U postgres -d fichaje
 
-.PHONY: up down migrate test psql
+app: migrate
+	@cd app && npm install --silent >/dev/null 2>&1
+	@node app/server.js
+
+.PHONY: up down migrate test psql app

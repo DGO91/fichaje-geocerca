@@ -44,16 +44,16 @@ begin
 
   if p_simulada then
     v_veredicto := 'ubicacion_simulada';
-    v_motivo := 'El dispositivo declaro una ubicacion simulada.';
+    v_motivo := 'El dispositivo declaró una ubicación simulada.';
   elsif not exists (select 1 from dispositivos
                     where huella = p_huella
                       and trabajador_id = p_trabajador
                       and revocado_en is null) then
     v_veredicto := 'dispositivo_ajeno';
-    v_motivo := 'El telefono no esta dado de alta para este trabajador.';
+    v_motivo := 'El teléfono no está dado de alta para este trabajador.';
   elsif p_precision_m > 75 then
     v_veredicto := 'precision_insuficiente';
-    v_motivo := format('Precision de %s m, por encima del limite de 75 m.',
+    v_motivo := format('Precisión de %s m, por encima del límite de 75 m.',
                        round(p_precision_m));
   elsif v_distancia > v_obra.radio_m then
     v_veredicto := 'fuera_de_perimetro';

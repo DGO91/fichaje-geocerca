@@ -12,6 +12,30 @@ comprobaciones. Se puede ejecutar las veces que haga falta: una tabla
 `schema_migrations` lleva la cuenta de lo aplicado, de modo que cada
 migración corre una sola vez y la segunda ejecución no produce errores.
 
+## La aplicación de prueba
+
+```bash
+make app
+```
+
+Levanta la base, aplica las migraciones y sirve una pantalla en
+`http://localhost:4100`. No es una maqueta: cada botón llama a `fichar()`
+y lo que aparece en el veredicto es lo que devuelve la base de datos.
+
+Cinco situaciones para probar, sin mover el teléfono de sitio:
+
+| Situación | Lo que ocurre |
+|---|---|
+| Estoy en la obra | Se acepta, a 28 m del centro |
+| Desde casa | Se rechaza, a 1514 m |
+| Con ubicación simulada | Se rechaza, aunque las coordenadas sean perfectas |
+| Desde el teléfono de un compañero | Se rechaza, el aparato no es suyo |
+| Con mala señal | Se rechaza por precisión insuficiente |
+
+Las horas se muestran en la zona de la obra, no en la del navegador: un
+capataz en Oakland y una oficina en Madrid tienen que leer la misma hora
+para la misma marca.
+
 ## La idea
 
 El teléfono siempre puede mentir: la hora se cambia en ajustes, las
@@ -74,8 +98,9 @@ operativo (Play Integrity y App Attest), que es la capa que confirma que
 el aparato no está manipulado. Esas van en el proyecto, no en la
 demostración.
 
-`pantalla-fichaje.png` muestra cómo se ve el veredicto en el teléfono.
-Los textos de rechazo son los que devuelve la base, no maquetación.
+`app-pantalla.png` y `pantalla-fichaje.png` muestran cómo se ve en el
+teléfono. Los textos de rechazo son los que devuelve la base de datos, no
+maquetación.
 
 ## Cómo trabajo
 
