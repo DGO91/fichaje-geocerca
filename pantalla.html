@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"/>
+<title>Fichaje con geocerca</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0b0c0d;color:#e8e9ea;font-family:Geist,system-ui,sans-serif;
+ padding:44px 40px;font-size:14px}
+.mono{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+h1{font-size:20px;font-weight:600;letter-spacing:-.02em}
+.sub{color:#8b9096;margin-top:6px;font-size:13px;max-width:70ch}
+.frames{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
+.phone{width:310px;border:1px solid rgba(255,255,255,.1);border-radius:26px;
+ background:#111315;overflow:hidden}
+.cap{padding:9px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+ color:#8b9096;border-bottom:1px solid rgba(255,255,255,.07);display:flex;
+ justify-content:space-between;align-items:center}
+.body{padding:18px}
+.obra{font-size:15px;font-weight:500}
+.obra small{display:block;color:#8b9096;font-weight:400;font-size:12px;margin-top:3px}
+.map{height:126px;margin:15px 0;border-radius:14px;position:relative;overflow:hidden;
+ background:
+  repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 22px),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 22px),
+  #16191b;border:1px solid rgba(255,255,255,.07)}
+.fence{position:absolute;left:50%;top:50%;width:92px;height:92px;margin:-46px 0 0 -46px;
+ border-radius:50%;border:1.5px dashed rgba(255,255,255,.25)}
+.me{position:absolute;width:11px;height:11px;border-radius:50%;
+ box-shadow:0 0 0 5px rgba(255,255,255,.07)}
+.ver{border-radius:12px;padding:13px 15px;margin-top:4px;border:1px solid}
+.ok{background:rgba(12,163,12,.08);border-color:rgba(12,163,12,.35)}
+.no{background:rgba(236,131,90,.08);border-color:rgba(236,131,90,.38)}
+.ver .t{font-size:13px;font-weight:600}
+.ver .m{font-size:12px;color:#aab0b6;margin-top:5px;line-height:1.45}
+.meta{margin-top:14px;border-top:1px solid rgba(255,255,255,.07);padding-top:12px}
+.meta div{display:flex;justify-content:space-between;padding:4px 0;font-size:12px;color:#8b9096}
+.meta b{color:#d7dade;font-weight:500}
+.btn{margin-top:16px;width:100%;padding:13px;border-radius:13px;border:0;
+ font:600 14px Geist;cursor:pointer}
+.go{background:#0ca30c;color:#061006}
+.off{background:rgba(255,255,255,.07);color:#6f757b}
+.note{margin-top:30px;color:#6f757b;font-size:12px;max-width:78ch;line-height:1.6}
+</style></head><body>
+<h1>Fichaje con geocerca</h1>
+<p class="sub">El telefono solo recoge la senal. Quien decide si la marca vale es el servidor, y lo escribe en un registro que despues nadie puede reescribir.</p>
+
+<div class="frames">
+
+ <div class="phone"><div class="cap"><span>07:58</span><span>Ramon Ortega</span></div>
+  <div class="body">
+   <div class="obra">Broadway Tower<small>Oakland, CA · radio 120 m</small></div>
+   <div class="map"><div class="fence"></div>
+    <div class="me" style="left:52%;top:42%;background:#0ca30c"></div></div>
+   <div class="ver ok"><div class="t">Entrada aceptada</div>
+    <div class="m">A 28 m del centro de la obra.</div></div>
+   <div class="meta">
+    <div><span>Hora del servidor</span><b class="mono">07:58:11</b></div>
+    <div><span>Precision GPS</span><b class="mono">12 m</b></div>
+    <div><span>Dispositivo</span><b>verificado</b></div>
+   </div>
+   <button class="btn go">Registrar salida</button>
+  </div></div>
+
+ <div class="phone"><div class="cap"><span>08:04</span><span>Javier Mena</span></div>
+  <div class="body">
+   <div class="obra">Broadway Tower<small>Oakland, CA · radio 120 m</small></div>
+   <div class="map"><div class="fence"></div>
+    <div class="me" style="left:12%;top:14%;background:#ec835a"></div></div>
+   <div class="ver no"><div class="t">Fuera del perimetro</div>
+    <div class="m">A 1514 m del centro, fuera del radio de 120 m.</div></div>
+   <div class="meta">
+    <div><span>Hora del servidor</span><b class="mono">08:04:37</b></div>
+    <div><span>Precision GPS</span><b class="mono">10 m</b></div>
+    <div><span>Queda registrado</span><b>si, con el motivo</b></div>
+   </div>
+   <button class="btn off">Acercate a la obra</button>
+  </div></div>
+
+ <div class="phone"><div class="cap"><span>08:11</span><span>Ramon Ortega</span></div>
+  <div class="body">
+   <div class="obra">Broadway Tower<small>Oakland, CA · radio 120 m</small></div>
+   <div class="map"><div class="fence"></div>
+    <div class="me" style="left:50%;top:50%;margin:-6px 0 0 -6px;background:#ec835a"></div></div>
+   <div class="ver no"><div class="t">Ubicacion simulada</div>
+    <div class="m">Las coordenadas caen en el centro exacto, pero el sistema operativo las declara falsas.</div></div>
+   <div class="meta">
+    <div><span>Hora del servidor</span><b class="mono">08:11:02</b></div>
+    <div><span>Precision GPS</span><b class="mono">5 m</b></div>
+    <div><span>Aviso al mayordomo</span><b>enviado</b></div>
+   </div>
+   <button class="btn off">Marca rechazada</button>
+  </div></div>
+
+</div>
+<p class="note">Las tres situaciones salen de las pruebas automaticas del repositorio: <span class="mono">01_dentro_del_perimetro</span>, <span class="mono">02_fuera_del_perimetro</span> y <span class="mono">03_ubicacion_simulada</span>. Los textos de rechazo son los que devuelve la propia base de datos, no maquetacion.</p>
+</body></html>
