@@ -76,3 +76,14 @@ demostración.
 
 `pantalla-fichaje.png` muestra cómo se ve el veredicto en el teléfono.
 Los textos de rechazo son los que devuelve la base, no maquetación.
+
+## Cómo trabajo
+
+Uso Claude Code como herramienta de desarrollo. Las decisiones de
+arquitectura son mías: qué se valida en el servidor y qué en el cliente,
+por qué la tabla es solo-añadir, dónde vive el perímetro y qué pasa con
+una marca rechazada. Y respondo de cada una.
+
+Las pruebas de este repositorio existen precisamente por eso. No pido que
+se confíe en el código ni en quién lo escribió: se clona, se ejecuta
+`make test` y se ve qué se sostiene.
