@@ -36,6 +36,27 @@ Las horas se muestran en la zona de la obra, no en la del navegador: un
 capataz en Oakland y una oficina en Madrid tienen que leer la misma hora
 para la misma marca.
 
+## Las ocho pantallas
+
+El esqueleto recorre todo lo que pide el encargo. Solo la primera consulta
+la base de datos; el resto son interfaces con datos de muestra, y cada una
+lo dice en su pie.
+
+| Pantalla | Qué cubre del encargo |
+|---|---|
+| Fichar | Control de asistencia con geolocalización, descansos y almuerzos |
+| Obras | Archivo digital por cada trabajo |
+| Ficha de obra | Fotos del progreso diario, documentos y estado de seguridad |
+| Seguridad | JHA, inspección de montacargas y reunión de seguridad |
+| CYB | Fotos, notas de audio y marca de tiempo por tarea |
+| Reporte | Parte diario, prerrellenado con lo que el sistema ya sabe |
+| Correo | Asistente de comunicación español a inglés |
+| Formación | Los 21 módulos para mayordomos, con avance por persona |
+
+Todas comparten cabecera, navegación, tipografía, radios y ritmo vertical,
+porque se generan desde una plantilla única en `app/construir.py`. Todas
+funcionan en español y en inglés, y todas responden de 320 px a escritorio.
+
 ## La idea
 
 El teléfono siempre puede mentir: la hora se cambia en ajustes, las

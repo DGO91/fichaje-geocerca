@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Obras · Golden State</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="estilo.css"/>
+</head><body>
+
+<div class="telefono">
+
+ <header>
+  <div>
+   <div class="quien">Javier Mena</div>
+   <div class="rol" data-es="Mayordomo · Broadway Tower" data-en="Foreman · Broadway Tower">Mayordomo · Broadway Tower</div>
+  </div>
+  <span class="idioma">
+   <button class="on" onclick="idioma('es')">ES</button>
+   <button onclick="idioma('en')">EN</button>
+  </span>
+ </header>
+
+ <nav class="menu"><a href="index.html" class="" data-es="Fichar" data-en="Clock in">Fichar</a><a href="obras.html" class="on" data-es="Obras" data-en="Jobs">Obras</a><a href="seguridad.html" class="" data-es="Seguridad" data-en="Safety">Seguridad</a><a href="cyb.html" class="" data-es="CYB" data-en="CYB">CYB</a><a href="reporte.html" class="" data-es="Reporte" data-en="Report">Reporte</a><a href="correo.html" class="" data-es="Correo" data-en="Email">Correo</a><a href="formacion.html" class="" data-es="Formación" data-en="Training">Formación</a></nav>
+
+
+ <section class="tarjeta">
+  <div class="rotulo" data-es="Archivo por trabajo" data-en="File per job">Archivo por trabajo</div>
+  <div class="lista">
+   <a class="fila" href="obra.html">
+    <div><div class="n">Broadway Tower</div><div class="s">Oakland, CA · 8 en obra</div></div>
+    <div class="der">
+     <span class="chip chip-ok"
+      data-es="reporte al día"
+      data-en="report up to date">reporte al día</span>
+    </div>
+   </a>
+   <a class="fila" href="obra.html">
+    <div><div class="n">Mission Bay Lot 4</div><div class="s">San Francisco, CA · 5 en obra</div></div>
+    <div class="der">
+     <span class="chip chip-aviso"
+      data-es="reporte pendiente"
+      data-en="report pending">reporte pendiente</span>
+    </div>
+   </a>
+   <a class="fila" href="obra.html">
+    <div><div class="n">Alameda Logistics</div><div class="s">Alameda, CA · 0 en obra</div></div>
+    <div class="der">
+     <span class="chip chip-ok"
+      data-es="reporte al día"
+      data-en="report up to date">reporte al día</span>
+    </div>
+   </a></div>
+ </section>
+
+ <button class="fichar secundario" data-es="Crear obra" data-en="New job">Crear obra</button>
+
+
+ <p class="muestra" data-es="Pantalla de ejemplo. Los datos son de muestra; el fichaje es el único que consulta la base de datos real."
+    data-en="Sample screen. The data is illustrative; clock-in is the only one that queries the real database.">Pantalla de ejemplo. Los datos son de muestra; el fichaje es el único que consulta la base de datos real.</p>
+</div>
+
+<script src="idioma.js"></script>
+</body></html>

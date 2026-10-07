@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Broadway Tower · Golden State</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="estilo.css"/>
+</head><body>
+
+<div class="telefono">
+
+ <header>
+  <div>
+   <div class="quien">Javier Mena</div>
+   <div class="rol" data-es="Mayordomo · Broadway Tower" data-en="Foreman · Broadway Tower">Mayordomo · Broadway Tower</div>
+  </div>
+  <span class="idioma">
+   <button class="on" onclick="idioma('es')">ES</button>
+   <button onclick="idioma('en')">EN</button>
+  </span>
+ </header>
+
+ <nav class="menu"><a href="index.html" class="" data-es="Fichar" data-en="Clock in">Fichar</a><a href="obras.html" class="" data-es="Obras" data-en="Jobs">Obras</a><a href="seguridad.html" class="" data-es="Seguridad" data-en="Safety">Seguridad</a><a href="cyb.html" class="" data-es="CYB" data-en="CYB">CYB</a><a href="reporte.html" class="" data-es="Reporte" data-en="Report">Reporte</a><a href="correo.html" class="" data-es="Correo" data-en="Email">Correo</a><a href="formacion.html" class="" data-es="Formación" data-en="Training">Formación</a></nav>
+
+
+ <div class="columnas">
+ <div class="col">
+
+ <section class="tarjeta">
+  <div class="rotulo" data-es="Obra" data-en="Job">Obra</div>
+  <div class="obra">Broadway Tower<small>1200 Broadway, Oakland, CA · <span data-es="cuadrilla de 8" data-en="crew of 8">cuadrilla de 8</span></small></div>
+  <div class="datos">
+   <div><span data-es="Contratista" data-en="General contractor">Contratista</span><b>Swinerton</b></div>
+   <div><span data-es="Vertido previsto" data-en="Pour scheduled">Vertido previsto</span><b>12 nov</b></div>
+   <div><span data-es="Tonelaje colocado" data-en="Tonnage placed">Tonelaje colocado</span><b class="num">18,4 t</b></div>
+  </div>
+ </section>
+
+ <section class="tarjeta">
+  <div class="chead"><div class="rotulo" data-es="Seguridad de hoy" data-en="Today's safety">Seguridad de hoy</div></div>
+  <div class="chips">
+   <span class="chip chip-ok"><span data-es="JHA firmado" data-en="JHA signed">JHA firmado</span></span>
+   <span class="chip chip-aviso"><span data-es="Montacargas pendiente" data-en="Forklift pending">Montacargas pendiente</span></span>
+   <span class="chip chip-ok"><span data-es="Tailgate hecho" data-en="Tailgate done">Tailgate hecho</span></span>
+  </div>
+ </section>
+
+ </div>
+ <div class="col">
+
+ <section class="tarjeta">
+  <div class="chead">
+   <div class="rotulo" data-es="Progreso de hoy" data-en="Today's progress">Progreso de hoy</div>
+   <span class="apunte">6 <span data-es="fotos" data-en="photos">fotos</span></span>
+  </div>
+  <div class="galeria"><div class="foto f1"><span>07:12</span></div><div class="foto f2"><span>09:40</span></div><div class="foto f3"><span>11:05</span></div><div class="foto f4"><span>13:22</span></div><div class="foto f5"><span>15:48</span></div><div class="foto f6"><span>16:30</span></div></div>
+  <button class="fichar" style="margin-top:14px" data-es="Añadir foto" data-en="Add photo">Añadir foto</button>
+ </section>
+
+ <section class="tarjeta">
+  <div class="rotulo" data-es="Documentos" data-en="Documents">Documentos</div>
+  <div class="lista">
+   <div class="fila"><div><div class="n"><span data-es="Planos estructurales S-204" data-en="Structural drawings S-204">Planos estructurales S-204</span></div>
+     <div class="s">PDF · 4,2 MB · <span data-es="rev. C" data-en="rev. C">rev. C</span></div></div></div>
+   <div class="fila"><div><div class="n"><span data-es="Permiso de vertido" data-en="Pour permit">Permiso de vertido</span></div>
+     <div class="s">PDF · 320 KB</div></div></div>
+  </div>
+ </section>
+
+ </div>
+ </div>
+
+
+ <p class="muestra" data-es="Pantalla de ejemplo. Los datos son de muestra; el fichaje es el único que consulta la base de datos real."
+    data-en="Sample screen. The data is illustrative; clock-in is the only one that queries the real database.">Pantalla de ejemplo. Los datos son de muestra; el fichaje es el único que consulta la base de datos real.</p>
+</div>
+
+<script src="idioma.js"></script>
+</body></html>

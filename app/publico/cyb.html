@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Registro CYB · Golden State</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="estilo.css"/>
+</head><body>
+
+<div class="telefono">
+
+ <header>
+  <div>
+   <div class="quien">Javier Mena</div>
+   <div class="rol" data-es="Mayordomo · Broadway Tower" data-en="Foreman · Broadway Tower">Mayordomo · Broadway Tower</div>
+  </div>
+  <span class="idioma">
+   <button class="on" onclick="idioma('es')">ES</button>
+   <button onclick="idioma('en')">EN</button>
+  </span>
+ </header>
+
+ <nav class="menu"><a href="index.html" class="" data-es="Fichar" data-en="Clock in">Fichar</a><a href="obras.html" class="" data-es="Obras" data-en="Jobs">Obras</a><a href="seguridad.html" class="" data-es="Seguridad" data-en="Safety">Seguridad</a><a href="cyb.html" class="on" data-es="CYB" data-en="CYB">CYB</a><a href="reporte.html" class="" data-es="Reporte" data-en="Report">Reporte</a><a href="correo.html" class="" data-es="Correo" data-en="Email">Correo</a><a href="formacion.html" class="" data-es="Formación" data-en="Training">Formación</a></nav>
+
+
+ <section class="tarjeta">
+  <div class="chead"><div class="rotulo" data-es="Registro del día" data-en="Today's log">Registro del día</div>
+   <span class="apunte">4 <span data-es="entradas" data-en="entries">entradas</span></span></div>
+  <div class="lista">
+   <div class="fila cyb">
+    <div class="hora num">07:40</div>
+    <div class="cuerpo">
+     <div class="n"><span data-es="Replanteo de columnas C4 a C9" data-en="Layout of columns C4 to C9">Replanteo de columnas C4 a C9</span></div>
+     <div class="s">Fotografía</div>
+    </div>
+    <div class="marca-tipo">foto</div>
+   </div>
+   <div class="fila cyb">
+    <div class="hora num">09:15</div>
+    <div class="cuerpo">
+     <div class="n"><span data-es="El contratista cambia la secuencia de vertido" data-en="GC changes the pour sequence">El contratista cambia la secuencia de vertido</span></div>
+     <div class="s">Nota de audio · 1:24</div>
+    </div>
+    <div class="marca-tipo">audio</div>
+   </div>
+   <div class="fila cyb">
+    <div class="hora num">11:02</div>
+    <div class="cuerpo">
+     <div class="n"><span data-es="Varilla #8 llega doblada de fábrica" data-en="#8 bar arrives bent from the mill">Varilla #8 llega doblada de fábrica</span></div>
+     <div class="s">Fotografía</div>
+    </div>
+    <div class="marca-tipo">foto</div>
+   </div>
+   <div class="fila cyb">
+    <div class="hora num">13:30</div>
+    <div class="cuerpo">
+     <div class="n"><span data-es="Espera de 40 min por la bomba" data-en="40 min wait for the pump">Espera de 40 min por la bomba</span></div>
+     <div class="s">Nota de audio · 0:48</div>
+    </div>
+    <div class="marca-tipo">audio</div>
+   </div></div>
+ </section>
+
+ <section class="tarjeta">
+  <div class="rotulo" data-es="Nueva entrada" data-en="New entry">Nueva entrada</div>
+  <p class="s" style="margin-top:8px"><span data-es="Cada entrada guarda su hora exacta en el momento de crearla." data-en="Every entry stores its exact time the moment it is created.">Cada entrada guarda su hora exacta en el momento de crearla.</span></p>
+  <div class="acciones">
+   <button class="accion"><b><span data-es="Foto" data-en="Photo">Foto</span></b></button>
+   <button class="accion"><b><span data-es="Audio" data-en="Audio">Audio</span></b></button>
+   <button class="accion"><b><span data-es="Nota" data-en="Note">Nota</span></b></button>
+  </div>
+ </section>
+
+
+ <p class="muestra" data-es="Pantalla de ejemplo. Los datos son de muestra; el fichaje es el único que consulta la base de datos real."
+    data-en="Sample screen. The data is illustrative; clock-in is the only one that queries the real database.">Pantalla de ejemplo. Los datos son de muestra; el fichaje es el único que consulta la base de datos real.</p>
+</div>
+
+<script src="idioma.js"></script>
+</body></html>

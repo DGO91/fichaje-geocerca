@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Reporte diario · Golden State</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="estilo.css"/>
+</head><body>
+
+<div class="telefono">
+
+ <header>
+  <div>
+   <div class="quien">Javier Mena</div>
+   <div class="rol" data-es="Mayordomo · Broadway Tower" data-en="Foreman · Broadway Tower">Mayordomo · Broadway Tower</div>
+  </div>
+  <span class="idioma">
+   <button class="on" onclick="idioma('es')">ES</button>
+   <button onclick="idioma('en')">EN</button>
+  </span>
+ </header>
+
+ <nav class="menu"><a href="index.html" class="" data-es="Fichar" data-en="Clock in">Fichar</a><a href="obras.html" class="" data-es="Obras" data-en="Jobs">Obras</a><a href="seguridad.html" class="" data-es="Seguridad" data-en="Safety">Seguridad</a><a href="cyb.html" class="" data-es="CYB" data-en="CYB">CYB</a><a href="reporte.html" class="on" data-es="Reporte" data-en="Report">Reporte</a><a href="correo.html" class="" data-es="Correo" data-en="Email">Correo</a><a href="formacion.html" class="" data-es="Formación" data-en="Training">Formación</a></nav>
+
+
+ <div class="columnas">
+ <div class="col">
+
+ <section class="tarjeta">
+  <div class="chead"><div class="rotulo" data-es="Reporte del 7 de octubre" data-en="Report for 7 October">Reporte del 7 de octubre</div>
+   <span class="chip chip-aviso"><span data-es="borrador" data-en="draft">borrador</span></span></div>
+  <p class="s" style="margin-bottom:14px"><span data-es="Lo que ya se sabe viene relleno. El mayordomo solo escribe lo que falta." data-en="What is already known comes pre-filled. The foreman only writes what is missing.">Lo que ya se sabe viene relleno. El mayordomo solo escribe lo que falta.</span></p>
+  <div class="datos">
+   <div><span data-es="Obra" data-en="Job">Obra</span><b>Broadway Tower</b></div>
+   <div><span data-es="Cuadrilla" data-en="Crew">Cuadrilla</span><b class="num">8</b></div>
+   <div><span data-es="Horas de la cuadrilla" data-en="Crew hours">Horas de la cuadrilla</span><b class="num">62,5</b></div>
+   <div><span data-es="Tonelaje colocado" data-en="Tonnage placed">Tonelaje colocado</span><b class="num">18,4 t</b></div>
+   <div><span data-es="Entradas CYB" data-en="CYB entries">Entradas CYB</span><b class="num">4</b></div>
+  </div>
+ </section>
+
+ </div>
+ <div class="col">
+
+ <section class="tarjeta">
+  <div class="rotulo" data-es="Trabajo realizado" data-en="Work completed">Trabajo realizado</div>
+  <div class="campo"><span data-es="Atado de columnas C4 a C9. Empezada la losa del nivel 3 por el lado este." data-en="Tied columns C4 to C9. Started level 3 deck on the east side.">Atado de columnas C4 a C9. Empezada la losa del nivel 3 por el lado este.</span></div>
+ </section>
+
+ <section class="tarjeta">
+  <div class="rotulo" data-es="Retrasos e incidencias" data-en="Delays and issues">Retrasos e incidencias</div>
+  <div class="campo"><span data-es="40 minutos de espera por la bomba. Varilla #8 recibida doblada: reclamada al proveedor." data-en="40 minute wait for the pump. #8 bar received bent: claimed to the supplier.">40 minutos de espera por la bomba. Varilla #8 recibida doblada: reclamada al proveedor.</span></div>
+ </section>
+
+ <section class="tarjeta">
+  <div class="rotulo" data-es="Mañana" data-en="Tomorrow">Mañana</div>
+  <div class="campo"><span data-es="Cerrar la losa del nivel 3. Se necesitan dos atadores más." data-en="Close level 3 deck. Two more tiers needed.">Cerrar la losa del nivel 3. Se necesitan dos atadores más.</span></div>
+ </section>
+
+ <button class="fichar" data-es="Enviar reporte" data-en="Send report">Enviar reporte</button>
+
+ </div>
+ </div>
+
+
+ <p class="muestra" data-es="Pantalla de ejemplo. Los datos son de muestra; el fichaje es el único que consulta la base de datos real."
+    data-en="Sample screen. The data is illustrative; clock-in is the only one that queries the real database.">Pantalla de ejemplo. Los datos son de muestra; el fichaje es el único que consulta la base de datos real.</p>
+</div>
+
+<script src="idioma.js"></script>
+</body></html>

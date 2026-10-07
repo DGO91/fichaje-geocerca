@@ -149,3 +149,120 @@ header .rol { font-size:13px; color:var(--tinta-2); margin-top:2px; }
 @media (prefers-reduced-motion: reduce) {
   .yo { transition:none; }
 }
+
+/* ───────────────────────────────── Navegación entre pantallas */
+
+.menu {
+  display:flex; gap:6px; margin-bottom:16px;
+  overflow-x:auto; -webkit-overflow-scrolling:touch;
+  scrollbar-width:none; padding-bottom:2px;
+}
+.menu::-webkit-scrollbar { display:none; }
+.menu a {
+  flex:0 0 auto; padding:9px 14px; border-radius:999px;
+  border:1px solid var(--linea); background:var(--fondo);
+  color:var(--tinta-2); text-decoration:none;
+  font:500 14px Geist, system-ui, sans-serif; white-space:nowrap;
+}
+.menu a.on { background:var(--tinta); border-color:var(--tinta); color:#fff; }
+
+/* ───────────────────────────────── Piezas compartidas */
+
+.chead { display:flex; align-items:center; justify-content:space-between;
+  gap:10px; flex-wrap:wrap; margin-bottom:14px; }
+.apunte { font-size:13px; color:var(--tinta-2); }
+
+.chip {
+  display:inline-block; padding:5px 11px; border-radius:999px;
+  background:var(--superficie); border:1px solid var(--linea);
+  font-size:12px; color:var(--tinta-2); white-space:nowrap;
+}
+.chip-ok { color:var(--aceptada); border-color:#bfe3bf; background:#f1faf1; }
+.chip-aviso { color:var(--rechazada); border-color:#f3d2bf; background:#fdf4ef; }
+.chip-apagado { color:#8d949c; }
+.chips { display:flex; gap:8px; flex-wrap:wrap; }
+
+.lista { display:flex; flex-direction:column; }
+.fila {
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:14px 0; border-top:1px solid var(--linea);
+  color:inherit; text-decoration:none;
+}
+.fila:first-child { border-top:0; }
+.fila .n { font-size:15px; font-weight:500; }
+.fila .s, .s { font-size:13px; color:var(--tinta-2); margin-top:3px; }
+.der { flex:0 0 auto; }
+
+.num { font-variant-numeric:tabular-nums; }
+
+.secundario { background:var(--fondo); color:var(--tinta);
+  border:1px solid var(--linea); }
+
+/* ───────────────────────────────── Fotos de obra */
+
+.galeria { display:grid; grid-template-columns:repeat(auto-fill, minmax(96px, 1fr)); gap:8px; }
+.foto {
+  aspect-ratio:1; border-radius:10px; border:1px solid var(--linea);
+  display:flex; align-items:flex-end; padding:7px;
+  background:linear-gradient(160deg, #e9edf1, #d7dde4);
+}
+.foto.f2 { background:linear-gradient(160deg, #e4e9ee, #cfd6de); }
+.foto.f3 { background:linear-gradient(160deg, #eceff2, #dde3e9); }
+.foto.f4 { background:linear-gradient(160deg, #e7ebef, #d3dae1); }
+.foto.f5 { background:linear-gradient(160deg, #eaeef1, #d9e0e6); }
+.foto.f6 { background:linear-gradient(160deg, #e6eaee, #d1d8e0); }
+.foto span { font:500 11px/1 'Geist', system-ui, sans-serif; color:#5a636d;
+  background:rgba(255,255,255,.8); padding:4px 6px; border-radius:6px; }
+
+/* ───────────────────────────────── Seguridad */
+
+.paso { padding:14px 0; border-top:1px solid var(--linea); }
+.paso:first-of-type { border-top:0; }
+.paso .n { font-size:15px; font-weight:500; margin-bottom:7px; }
+.par { display:flex; gap:10px; padding:3px 0; font-size:14px; color:var(--tinta-2); }
+.par .et { flex:0 0 62px; font-size:12px; color:#8d949c; padding-top:2px; }
+.firma { margin-top:14px; padding-top:12px; border-top:1px solid var(--linea);
+  font-size:13px; color:var(--tinta-2); }
+
+.check { display:flex; align-items:center; gap:11px; padding:11px 0;
+  border-top:1px solid var(--linea); font-size:15px; cursor:pointer; }
+.check:first-of-type { border-top:0; }
+.check input { width:20px; height:20px; accent-color:var(--accion); flex:0 0 auto; }
+
+/* ───────────────────────────────── CYB */
+
+.fila.cyb { align-items:flex-start; }
+.fila.cyb .hora { flex:0 0 52px; font-size:13px; color:var(--tinta-2); padding-top:2px; }
+.fila.cyb .cuerpo { flex:1 1 auto; min-width:0; }
+.marca-tipo { flex:0 0 auto; font-size:12px; color:#8d949c;
+  border:1px solid var(--linea); border-radius:999px; padding:4px 10px; }
+
+.acciones { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:14px; }
+.accion { padding:16px 8px; border-radius:var(--radio); border:1px solid var(--linea);
+  background:var(--fondo); font:500 14px Geist, system-ui, sans-serif;
+  color:var(--tinta); cursor:pointer; }
+
+/* ───────────────────────────────── Textos largos */
+
+.campo {
+  margin-top:10px; padding:13px 14px; border-radius:var(--radio);
+  background:var(--superficie); border:1px solid var(--linea);
+  font-size:15px; line-height:1.55;
+}
+.correo { font-size:15px; line-height:1.6; }
+.traduccion { margin-top:16px; padding-top:14px; border-top:1px solid var(--linea); }
+.traduccion p { margin-top:8px; font-size:15px; line-height:1.6; color:var(--tinta-2); }
+
+/* ───────────────────────────────── Formación */
+
+.modulos { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:10px; }
+.modulo { padding:14px; border:1px solid var(--linea); border-radius:var(--radio); }
+.modulo .n { font-size:14px; font-weight:500; min-height:2.8em; }
+.modulo .bar { height:5px; border-radius:999px; background:var(--superficie);
+  border:1px solid var(--linea); overflow:hidden; margin:10px 0 7px; }
+.modulo .bar i { display:block; height:100%; background:var(--accion); }
+
+/* ───────────────────────────────── Aviso de pantalla de ejemplo */
+
+.muestra { margin-top:22px; font-size:12px; line-height:1.5; color:#8d949c;
+  text-align:center; }
