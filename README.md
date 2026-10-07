@@ -57,6 +57,11 @@ Todas comparten cabecera, navegación, tipografía, radios y ritmo vertical,
 porque se generan desde una plantilla única en `app/construir.py`. Todas
 funcionan en español y en inglés, y todas responden de 320 px a escritorio.
 
+`app-movil-ocho.png` muestra las ocho a 390 px, que es el ancho real de un
+teléfono. La hoja se genera abriendo `/movil.html`, que incrusta cada
+pantalla en un marco de ese ancho: no son maquetas aparte, es la misma
+aplicación vista en el tamaño en que se va a usar.
+
 ## La idea
 
 El teléfono siempre puede mentir: la hora se cambia en ajustes, las

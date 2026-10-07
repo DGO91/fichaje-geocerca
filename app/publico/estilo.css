@@ -26,7 +26,7 @@ body {
   padding-right:max(clamp(12px,4vw,32px), env(safe-area-inset-right));
 }
 
-.telefono { width:100%; max-width:460px; }
+.telefono { width:100%; max-width:460px; min-width:0; }
 
 /* Una sola columna en el telefono, que es donde se usa. En pantallas
    anchas se reparte en dos para que no quede una tira estrecha en medio
@@ -36,13 +36,16 @@ body {
 @media (min-width: 880px) {
   .telefono { max-width:940px; }
   .columnas { display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start; }
+  .col { min-width:0; }
   .mapa { height:200px; }
 }
 
 header {
   display:flex; align-items:center; justify-content:space-between;
-  margin-bottom:18px;
+  margin-bottom:18px; min-width:0;
 }
+header > div:first-child { min-width:0; }
+.idioma { flex:0 0 auto; }
 header { gap:12px; }
 header .quien { font-size:17px; font-weight:600; letter-spacing:-.01em;
   overflow-wrap:anywhere; }
@@ -153,7 +156,7 @@ header .rol { font-size:13px; color:var(--tinta-2); margin-top:2px; }
 /* ───────────────────────────────── Navegación entre pantallas */
 
 .menu {
-  display:flex; gap:6px; margin-bottom:16px;
+  display:flex; gap:6px; margin-bottom:16px; min-width:0;
   overflow-x:auto; -webkit-overflow-scrolling:touch;
   scrollbar-width:none; padding-bottom:2px;
 }
@@ -169,7 +172,8 @@ header .rol { font-size:13px; color:var(--tinta-2); margin-top:2px; }
 /* ───────────────────────────────── Piezas compartidas */
 
 .chead { display:flex; align-items:center; justify-content:space-between;
-  gap:10px; flex-wrap:wrap; margin-bottom:14px; }
+  gap:10px; flex-wrap:wrap; margin-bottom:14px; min-width:0; }
+.chead .rotulo { min-width:0; }
 .apunte { font-size:13px; color:var(--tinta-2); }
 
 .chip {
